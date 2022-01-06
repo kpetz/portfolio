@@ -4,7 +4,19 @@ module.exports = {
     "./components/**/*.tsx",
   ],
   theme: {
-    extend: {},
+    fontFamily: {
+      'kaushan': ['Kaushan Script'],
+    },
+    extend: {
+      colors: {
+        nightPurple:{
+          DEFAULT: '#330867',
+        },
+        nightBlue:{
+          DEFAULT: '#30cfd0',
+        }
+      },
+    },
   },
   plugins: [],
 }
