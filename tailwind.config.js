@@ -3,6 +3,7 @@ module.exports = {
     "./pages/**/*.tsx",
     "./components/**/*.tsx",
   ],
+  darkMode: "class",
   theme: {
     fontFamily: {
       'kaushan': ['Kaushan Script'],
@@ -15,6 +16,11 @@ module.exports = {
         nightBlue:{
           DEFAULT: '#30cfd0',
         }
+      },
+    },
+    variants: {
+      extend: {
+        boxShadow: ["dark"],
       },
     },
   },
