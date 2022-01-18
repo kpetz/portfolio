@@ -14,7 +14,7 @@ const NavItem: FunctionComponent<{
                 <a>
                     <span
                         onClick={() => setActiveItem(name)}
-                        className='hover:text-blue-700'
+                        className='mx-2 cursor-pointer hover:text-blue-700'
                     >
                         {name}
                     </span>
@@ -27,18 +27,19 @@ const NavItem: FunctionComponent<{
 const NavBar = () => {
     const [activeItem, setActiveItem] = useState<string>('');
     const { pathname } = useRouter();
+
     useEffect(() => {
         if (pathname === '/') setActiveItem('About')
-        if (pathname === '/projects') setActiveItem('Projects')
-        if (pathname === '/resume') setActiveItem('Resume')
+        else if (pathname === '/projects') setActiveItem('Projects')
+        else if (pathname === '/resume') setActiveItem('Resume')
     }, [])
 
     return (
-        <div className='flex justify-between px-5 py-3 my-3'>
+        <div className='flex items-center justify-between px-5 py-3 my-3'>
             <span className='text-xl font-bold text-blue-700 border-b-4 border-blue-700 md:text-2xl'>
                 {activeItem}
             </span>
-            <div className='flex space-x-3 font-lg'>
+            <div className='text-base font-normal md:text-xl'>
                 <NavItem
                     activeItem={activeItem}
                     setActiveItem={setActiveItem}
