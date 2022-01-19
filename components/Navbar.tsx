@@ -14,7 +14,7 @@ const NavItem: FunctionComponent<{
                 <a>
                     <span
                         onClick={() => setActiveItem(name)}
-                        className='mx-2 cursor-pointer hover:text-blue-700'
+                        className='mx-2 cursor-pointer hover:text-indigo-700 dark:hover:text-cyan-400'
                     >
                         {name}
                     </span>
@@ -36,7 +36,7 @@ const NavBar = () => {
 
     return (
         <div className='flex items-center justify-between px-5 py-3 my-3'>
-            <span className='text-xl font-bold text-blue-700 border-b-4 border-blue-700 md:text-2xl'>
+            <span className='text-xl font-bold text-indigo-700 dark:text-cyan-400 border-b-4 border-indigo-700 dark:border-cyan-400 md:text-2xl'>
                 {activeItem}
             </span>
             <div className='text-base font-normal md:text-xl'>
